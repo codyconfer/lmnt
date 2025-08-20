@@ -1,11 +1,15 @@
-import {html, LitElement} from 'lit'
+import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
-import {interactiveStyles} from "./styles.ts";
+import {cliStyles} from '@elements/cli/styles.ts'
 
 
 @customElement('lmnt-prompt')
 export class Prompt extends LitElement {
-  static styles = [interactiveStyles]
+  static styles = [
+    cliStyles,
+    css`
+    `
+  ]
 
   render() {
     return html`

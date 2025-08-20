@@ -1,6 +1,6 @@
 import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
-import {layoutStyles} from "./styles.ts";
+import {layoutStyles} from "@elements/layout/styles.ts";
 
 
 @customElement('lmnt-footer')
