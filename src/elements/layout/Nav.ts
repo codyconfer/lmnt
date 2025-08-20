@@ -1,10 +1,15 @@
-import {html, LitElement} from 'lit'
+import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
+import {layoutStyles} from "@elements/layout/styles.ts";
 
 
 @customElement('lmnt-nav')
 export class Nav extends LitElement {
-  static styles = []
+  static styles = [
+    layoutStyles,
+    css`
+    `
+  ]
 
   render() {
     return html`

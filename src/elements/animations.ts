@@ -1,5 +1,5 @@
-import {css, html, LitElement} from "lit";
-import {customElement} from "lit/decorators.js";
+import {css, html, LitElement} from "lit"
+import {customElement} from "lit/decorators.js"
 
 @customElement("typing-animation")
 export class TypingAnimation extends LitElement {
@@ -7,13 +7,13 @@ export class TypingAnimation extends LitElement {
     .typewriter {
       width: fit-content;
     }
-  `;
+  `
 
   render() {
     return html`
       <div class="typewriter">
       </div>
-    `;
+    `
   }
 }
 
@@ -37,14 +37,14 @@ export class CursorAnimation extends LitElement {
       margin: 0;
       animation: blink-cursor 1s step-end infinite;
     }
-  `;
+  `
 
   render() {
     return html`
       <div class="cursor">
         <slot></slot>
       </div>
-    `;
+    `
   }
 }
 
@@ -66,20 +66,21 @@ export class BlinkAnimation extends LitElement {
       color: var(--accent-0);
       animation: blink 1s step-end infinite;
     }
-  `;
+  `
 
   render() {
     return html`
       <div class="blink">
         <slot></slot>
       </div>
-    `;
+    `
   }
 }
 
 declare global {
   interface HTMLElementTagNameMap {
-    "typing-animation": TypingAnimation;
-    "cursor-animation": CursorAnimation;
+    "typing-animation": TypingAnimation
+    "cursor-animation": CursorAnimation
+    "blink-animation": BlinkAnimation
   }
 }

@@ -1,10 +1,15 @@
-import {html, LitElement} from 'lit'
+import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
+import {photoStyles} from '@elements/gallery/styles.ts'
 
 
 @customElement('lmnt-photo-grid')
 export class PhotoGrid extends LitElement {
-  static styles = []
+  static styles = [
+    photoStyles,
+    css`
+    `
+  ]
 
   render() {
     return html`

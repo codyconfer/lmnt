@@ -1,10 +1,15 @@
-import {html, LitElement} from 'lit'
+import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
+import {notificationStyles} from '@elements/notifications/styles.ts'
 
 
 @customElement('lmnt-toast')
 export class Toast extends LitElement {
-  static styles = []
+  static styles = [
+    notificationStyles,
+    css`
+    `
+  ]
 
   render() {
     return html`

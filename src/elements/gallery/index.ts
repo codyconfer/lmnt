@@ -1,2 +1,2 @@
-export * from './Photo.ts'
-export * from './PhotoGrid.ts'
+export * from '@elements/gallery/Photo.ts'
+export * from '@elements/gallery/PhotoGrid.ts'
