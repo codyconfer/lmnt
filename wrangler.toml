@@ -1,0 +1,5 @@
+name = "lmnt"
+compatibility_date = "2022-07-12"
+
+[assets]
+directory = "./dist"
