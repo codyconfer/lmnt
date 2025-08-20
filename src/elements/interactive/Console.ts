@@ -1,7 +1,7 @@
 import {html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
 // @ts-ignore
-import {history} from '../../events'
+//import {history} from '../../events'
 import {interactiveStyles} from "./styles.ts";
 
 
