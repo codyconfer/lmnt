@@ -17,7 +17,7 @@ export default defineConfig({
       entry: {
         'lmnt': `${__src}/index.ts`,
         'lmnt.elements': `${__src}/elements/index.ts`,
-        'lmnt.events': `${__src}/events/index.ts`,
+        //'lmnt.events': `${__src}/events/index.ts`,
       },
       name: 'lmnt',
       formats: ['cjs', 'es'],
