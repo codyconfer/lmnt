@@ -7,6 +7,7 @@ history.next("Hi")
 history.next("Thing")
 
 history.subscribe({
+  // @ts-ignore
   next: value => console.log(`${value}`),
   complete: () => console.log('completed'),
 });
