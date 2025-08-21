@@ -32,15 +32,16 @@ export default defineConfig({
       name: 'lmnt',
       formats: ['cjs', 'es'],
       fileName: (format: string) => {
+        const _js = `lib/js/`
         switch (format) {
           case 'es':
-            return 'lib/lmnt.js'
+            return `${_js}lmnt.js`
           case 'iife':
           case 'cjs':
           case 'umd':
           case 'system':
           default:
-            return `lib/lmnt.${format}.js`
+            return `${_js}lmnt.${format}.js`
         }
       },
     },

@@ -7,8 +7,20 @@ export class ContentSlim extends LitElement {
   static styles = [
     layoutStyles,
     css`
+      :host {
+        display: flex;
+        flex: fit-content;
+        margin: 0 3rem;
+      }
+
       .content {
         gap: 1rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        :host {
+          margin: 0;
+        }
       }
     `,
   ];

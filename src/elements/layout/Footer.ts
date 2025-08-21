@@ -8,7 +8,7 @@ export class Footer extends LitElement {
   static styles = [
     layoutStyles,
     css`
-      footer .wrapper {
+      footer div {
         display: flex;
         justify-content: space-between;
         align-items: center;

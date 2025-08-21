@@ -8,6 +8,7 @@ export class Veil extends LitElement {
   static styles = [
     layoutStyles,
     css`
+      :host,
       main {
         display: flex;
         flex-direction: column;
@@ -19,8 +20,9 @@ export class Veil extends LitElement {
   ]
 
   render() {
+    document.getElementById("lmnt-veil")?.classList.remove("hidden")
     return html`
-      <main class="veil">
+      <main>
         <slot></slot>
       </main>
     `
