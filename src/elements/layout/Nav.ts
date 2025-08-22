@@ -8,6 +8,9 @@ export class Nav extends LitElement {
   static styles = [
     layoutStyles,
     css`
+      .wrapper {
+        display: flex;
+      }
     `
   ]
 

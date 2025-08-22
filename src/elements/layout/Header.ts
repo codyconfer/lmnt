@@ -11,14 +11,15 @@ export class Header extends LitElement {
       header .wrapper {
         display: flex;
         align-items: center;
-        flex-direction: row;
+        flex-direction: column;
         gap: 1rem;
       }
 
       @media only screen and (max-width: 480px) {
-        :host {
+        :host,
+        header {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
         }
