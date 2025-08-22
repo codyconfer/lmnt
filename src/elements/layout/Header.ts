@@ -8,17 +8,22 @@ export class Header extends LitElement {
   static styles = [
     layoutStyles,
     css`
-      header .wrapper {
+      :host,
+      header,
+      .wrapper {
         display: flex;
+        justify-content: flex-start;
         align-items: center;
         flex-direction: row;
         gap: 1rem;
       }
 
       @media only screen and (max-width: 480px) {
-        :host {
+        :host,
+        header,
+        .wrapper {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           align-items: center;
           justify-content: center;
         }
