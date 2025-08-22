@@ -1,0 +1,45 @@
+:root {
+  /*palette*/
+  --base03: #181a1f;
+  --base02: #21252b;
+  --base01: #282c34;
+  --base00: #2c313c;
+  --base0: #404754;
+  --base1: #484e5b;
+  --base2: #515a6b;
+  --base3: #5c6370;
+  --base4: #737984;
+  --base5: #bbbbbb;
+  --base6: #c5c5c5;
+  --yellow: #e5c07b;
+  --orange: #d19a66;
+  --red: #f44747;
+  --coral: #ef596f;
+  --indigo: #7e0097;
+  --violet: #d55fde;
+  --blue: #568af2;
+  --malibu: #61afef;
+  --cyan: #2bbac5;
+  --green: #89ca78;
+
+  /*dark scheme*/
+  color-scheme: light dark;
+  --background-0: var(--base02);
+  --background-1: var(--base01);
+  --foreground-0: var(--base5);
+  --foreground-1: var(--base6);
+  --accent-0: var(--orange);
+  --accent-1: var(--green);
+  --accent-2: var(--malibu);
+  --accent-3: var(--violet);
+  --highlight-0: var(--coral);
+  --highlight-1: var(--cyan);
+  --muted-0: var(--base4);
+  --muted-1: var(--base3);
+  --muted-2: var(--base2);
+  --warn: var(--yellow);
+  --error: var(--red);
+  /*default colors*/
+  color: var(--foreground-0);
+  background-color: var(--background-0);
+}

@@ -1,18 +1,18 @@
 @font-face {
   font-family: Cabin;
-  src: url('Cabin.woff2') format('woff2');
+  src: url('/lib/fonts/Cabin.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: Terminess;
-  src: url('Terminess.woff2') format('woff2');
+  src: url('/lib/fonts/Terminess.woff2') format('woff2');
   font-display: swap;
 }
 
 @font-face {
   font-family: Dyslexic;
-  src: url('OpenDyslexic.woff2') format('woff2');
+  src: url('/lib/fonts/OpenDyslexic.woff2') format('woff2');
   font-display: swap;
 }
 

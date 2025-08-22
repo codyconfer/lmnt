@@ -12,8 +12,15 @@ export class Content extends LitElement {
         flex: fit-content;
         margin: 0 3rem;
       }
+
       .content {
         gap: 1rem;
+      }
+
+      @media only screen and (max-width: 768px) {
+        :host {
+          margin: 0;
+        }
       }
     `
   ]

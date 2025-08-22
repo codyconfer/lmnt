@@ -1,6 +1,6 @@
 @import url("fonts.css");
-@import url("colors.css");
-@import url("syntax.css");
+@import url("../lib/theme/vivid-one-dark.css");
+@import url("../lib/theme/syntax.css");
 
 :root {
   color: var(--foreground-0);
