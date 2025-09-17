@@ -1,12 +1,12 @@
 import {css, html, LitElement} from 'lit'
 import {customElement, property} from 'lit/decorators.js'
-import {textStyles} from '@elements/text/styles.ts'
+import {contentStyles} from '@elements/content/styles.ts'
 
 
-@customElement('lmnt-imglink')
+@customElement('lmnt-img-link')
 export class ImgLink extends LitElement {
   static styles = [
-    textStyles,
+    contentStyles,
     css`
       .icon,
       .logo {
@@ -39,6 +39,6 @@ export class ImgLink extends LitElement {
 
 declare global {
   interface HTMLElementTagNameMap {
-    'lmnt-imglink': ImgLink
+    'lmnt-img-link': ImgLink
   }
 }
