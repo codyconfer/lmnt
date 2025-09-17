@@ -17,12 +17,22 @@ export class IconRow extends LitElement {
     css`
       .icon-row {
         display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
         gap: 3rem;
-        justify-content: center;
       }
       img {
+        justify-content: center;
         height: 4rem;
         width: auto;
+      }
+      @media only screen and (max-width: 480px) {
+        .icon-row {
+          align-items: center;
+          justify-content: center;
+        }
       }
     `
   ]
