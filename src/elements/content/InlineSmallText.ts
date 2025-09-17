@@ -1,12 +1,12 @@
 import {css, html, LitElement} from 'lit'
 import {customElement} from 'lit/decorators.js'
-import {textStyles} from '@elements/text/styles.ts'
+import {contentStyles} from '@elements/content/styles.ts'
 
 
 @customElement('lmnt-i-smtxt')
 export class InlineSmallText extends LitElement {
   static styles = [
-    textStyles,
+    contentStyles,
     css`
       .small-text {
         display: flex;

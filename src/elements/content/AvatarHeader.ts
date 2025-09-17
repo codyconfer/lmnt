@@ -1,12 +1,12 @@
 import {css, html, LitElement} from 'lit'
 import {customElement, property} from 'lit/decorators.js'
-import {profileStyles} from '@elements/profile/styles.ts'
+import {contentStyles} from '@elements/content/styles.ts'
 
 
 @customElement('lmnt-avatar-header')
 export class AvatarHeader extends LitElement {
   static styles = [
-    profileStyles,
+    contentStyles,
     css`
       .avatar {
         width: 48px;
