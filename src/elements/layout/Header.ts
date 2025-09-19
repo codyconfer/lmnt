@@ -16,6 +16,7 @@ export class Header extends LitElement {
         align-items: center;
         flex-direction: row;
         gap: 1rem;
+        margin: 0 1rem;
       }
 
       @media only screen and (max-width: 480px) {
@@ -26,6 +27,7 @@ export class Header extends LitElement {
           flex-direction: column;
           align-items: center;
           justify-content: center;
+          margin: 0;
         }
       }
     `]

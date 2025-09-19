@@ -8,15 +8,22 @@ export class Footer extends LitElement {
   static styles = [
     layoutStyles,
     css`
+      :host {
+        margin: 0 3rem;
+      }
       footer div {
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row;
       }
-
       .copyright {
         font-size: 0.8rem;
+      }
+      @media only screen and (max-width: 480px) {
+        :host {
+          margin: 0;
+        }
       }
     `]
 
