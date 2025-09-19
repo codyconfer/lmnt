@@ -20,6 +20,7 @@ export class IconGrid extends LitElement {
         .icon-grid {
           align-items: center;
           justify-content: center;
+          gap: 5rem;
         }
       }
     `
