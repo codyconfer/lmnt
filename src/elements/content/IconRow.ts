@@ -27,6 +27,7 @@ export class IconRow extends LitElement {
         justify-content: center;
         height: 4rem;
         width: auto;
+        max-width: 12rem;
       }
       @media only screen and (max-width: 480px) {
         .icon-row {
