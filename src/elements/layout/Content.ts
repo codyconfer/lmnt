@@ -10,6 +10,8 @@ export class Content extends LitElement {
       :host {
         display: flex;
         flex: fit-content;
+        align-items: center;
+        justify-content: center;
         margin: 0 3rem;
       }
 
