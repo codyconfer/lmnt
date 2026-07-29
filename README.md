@@ -6,22 +6,27 @@
 
 ### Build Tools
 
-[Install Bun](https://github.com/oven-sh/bun)
+Node 24+ (see `.nvmrc`) and [pnpm](https://pnpm.io/installation). The package manager
+is pinned via the `packageManager` field, so corepack is the simplest setup:
+
+```bash
+corepack enable
+```
 
 #### Install Dependencies
 
 ```bash
-bun install
+pnpm install
 ```
 
 ### Dev
 
 ```bash
-bun run dev
+pnpm dev
 ```
 
 ### Package
 
 ```bash
-bun run build
+pnpm build
 ```

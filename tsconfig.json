@@ -9,11 +9,9 @@
       "DOM",
       "DOM.Iterable"
     ],
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@elements/*": ["src/elements/*"],
-      "@events/*": ["src/events/*"]
+      "@/*": ["./src/*"],
+      "@elements/*": ["./src/elements/*"]
     },
     "skipLibCheck": true,
     /* Bundler mode */
