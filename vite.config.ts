@@ -1,32 +1,30 @@
 import {defineConfig} from "vite"
-import terser from "@rollup/plugin-terser"
 import {minifyTemplateLiterals} from "rollup-plugin-minify-template-literals"
 
 
-const __dist = `${__dirname}/dist`
-const __src = `${__dirname}/src`
+const __root = import.meta.dirname
+const __dist = `${__root}/dist`
+const __src = `${__root}/src`
 const __elements = `${__src}/elements`
-const __events = `${__src}/events`
 
 export default defineConfig({
   resolve: {
     alias: [
-      { find: "@root", replacement: __dirname },
+      { find: "@root", replacement: __root },
       { find: "@", replacement: __src },
-      { find: "@elements", replacement: __elements },
-      { find: "@events", replacement: __events }
+      { find: "@elements", replacement: __elements }
     ],
   },
   plugins: [
-    minifyTemplateLiterals({exclude: 'node_modules/**'}),
-    terser({format: {comments: false}})
+    minifyTemplateLiterals({exclude: 'node_modules/**'})
   ],
   build: {
+    minify: 'terser',
+    terserOptions: {format: {comments: false}},
     lib: {
       entry: {
         'lmnt': `${__src}/index.ts`,
         'lmnt.elements': `${__src}/elements/index.ts`,
-        //'lmnt.events': `${__src}/events/index.ts`,
       },
       name: 'lmnt',
       formats: ['cjs', 'es'],
@@ -46,7 +44,7 @@ export default defineConfig({
     },
     rollupOptions: {
       input: {
-        main: `${__dirname}/index.html`,
+        main: `${__root}/index.html`,
       },
     },
     outDir: __dist,
