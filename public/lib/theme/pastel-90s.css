@@ -1,0 +1,40 @@
+:root {
+  /*palette*/
+  --cream: #fff8f2;
+  --blush: #ffeef5;
+  --lavender: #f3ecfa;
+  --grape-0: #4a3b58;
+  --grape-1: #3a2d46;
+  --mauve-0: #7c6b8e;
+  --mauve-1: #9788a7;
+  --mauve-2: #b4a8c2;
+  --flamingo: #e0679a;
+  --bubblegum: #f472b6;
+  --seafoam: #2aa87e;
+  --sky: #4d9fd6;
+  --lilac: #9b6fd0;
+  --teal: #1fada6;
+  --butter: #c9950c;
+  --watermelon: #e25563;
+
+  /*light scheme*/
+  color-scheme: light;
+  --background-0: var(--cream);
+  --background-1: var(--blush);
+  --foreground-0: var(--grape-0);
+  --foreground-1: var(--grape-1);
+  --accent-0: var(--flamingo);
+  --accent-1: var(--seafoam);
+  --accent-2: var(--sky);
+  --accent-3: var(--lilac);
+  --highlight-0: var(--bubblegum);
+  --highlight-1: var(--teal);
+  --muted-0: var(--mauve-0);
+  --muted-1: var(--mauve-1);
+  --muted-2: var(--mauve-2);
+  --warn: var(--butter);
+  --error: var(--watermelon);
+  /*default colors*/
+  color: var(--foreground-0);
+  background-color: var(--background-0);
+}

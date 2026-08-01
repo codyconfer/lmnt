@@ -1,0 +1,45 @@
+/* from Desktop/ima8ges.jpg — "Triadic Palette #F7B5AB":
+   Pastel Rose #F7B5AB, Sunlit Yellow #FFD83D, Seafoam Green #90EE90,
+   Peachy Cream #FFDEAD, Sky Blue #87CEEB */
+:root {
+  /*palette*/
+  --pastel-rose: #f7b5ab;
+  --sunlit-yellow: #ffd83d;
+  --seafoam-green: #90ee90;
+  --peachy-cream: #ffdead;
+  --sky-blue: #87ceeb;
+  /*derived shades*/
+  --cream-0: #fff6e8;
+  --cocoa-0: #55403a;
+  --cocoa-1: #40302b;
+  --sand-0: #8a7568;
+  --sand-1: #a08c7f;
+  --sand-2: #b7a496;
+  --rose-deep: #e26a5a;
+  --seafoam-deep: #3aa65c;
+  --sky-deep: #3d95c4;
+  --lagoon: #1f95a8;
+  --gold-deep: #b8890b;
+  --watermelon: #d94f3f;
+
+  /*light scheme*/
+  color-scheme: light;
+  --background-0: var(--cream-0);
+  --background-1: var(--peachy-cream);
+  --foreground-0: var(--cocoa-0);
+  --foreground-1: var(--cocoa-1);
+  --accent-0: var(--rose-deep);
+  --accent-1: var(--seafoam-deep);
+  --accent-2: var(--sky-deep);
+  --accent-3: var(--gold-deep);
+  --highlight-0: var(--rose-deep);
+  --highlight-1: var(--lagoon);
+  --muted-0: var(--sand-0);
+  --muted-1: var(--sand-1);
+  --muted-2: var(--sand-2);
+  --warn: var(--gold-deep);
+  --error: var(--watermelon);
+  /*default colors*/
+  color: var(--foreground-0);
+  background-color: var(--background-0);
+}

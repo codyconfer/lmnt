@@ -1,0 +1,43 @@
+/* from Desktop/imag7es.jpg — "Triadic Palette #F7E3D9":
+   Pale Peach #F7E3D9, Seafoam Green #90EE90, Indigo #4B0082,
+   Pastel Lavender #E6E6FA, Pale Lavender #D8BFD8 */
+:root {
+  /*palette*/
+  --pale-peach: #f7e3d9;
+  --seafoam-green: #90ee90;
+  --indigo: #4b0082;
+  --pastel-lavender: #e6e6fa;
+  --pale-lavender: #d8bfd8;
+  /*derived shades*/
+  --plum-0: #46345a;
+  --plum-1: #35244a;
+  --dusk-0: #79688a;
+  --dusk-1: #93839f;
+  --dusk-2: #ad9fb8;
+  --seafoam-deep: #3da35f;
+  --slate-violet: #6b5bd6;
+  --orchid-deep: #a04ca8;
+  --honey: #b5822f;
+  --berry: #cc4f5e;
+
+  /*light scheme*/
+  color-scheme: light;
+  --background-0: var(--pale-peach);
+  --background-1: var(--pastel-lavender);
+  --foreground-0: var(--plum-0);
+  --foreground-1: var(--plum-1);
+  --accent-0: var(--indigo);
+  --accent-1: var(--seafoam-deep);
+  --accent-2: var(--slate-violet);
+  --accent-3: var(--orchid-deep);
+  --highlight-0: var(--orchid-deep);
+  --highlight-1: var(--slate-violet);
+  --muted-0: var(--dusk-0);
+  --muted-1: var(--dusk-1);
+  --muted-2: var(--dusk-2);
+  --warn: var(--honey);
+  --error: var(--berry);
+  /*default colors*/
+  color: var(--foreground-0);
+  background-color: var(--background-0);
+}

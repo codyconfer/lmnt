@@ -1,0 +1,43 @@
+/* from Desktop/images.jpg — "Complementary Palette #B0A595":
+   Dusty Rose #B0A595, Green Teal #008080, Mauve Lavender #E0B0FF,
+   Pastel Rose #F88379, Light Sage #90EE90 */
+:root {
+  /*palette*/
+  --dusty-rose: #b0a595;
+  --green-teal: #008080;
+  --mauve-lavender: #e0b0ff;
+  --pastel-rose: #f88379;
+  --light-sage: #90ee90;
+  /*derived shades*/
+  --linen-0: #f5f1ec;
+  --linen-1: #ece5dd;
+  --umber-0: #4a423c;
+  --umber-1: #3a332e;
+  --taupe-0: #857468;
+  --taupe-1: #9c8d82;
+  --sage-deep: #4e9e54;
+  --mauve-deep: #9b5fd0;
+  --rose-deep: #d95c50;
+  --amber: #a8842c;
+
+  /*light scheme*/
+  color-scheme: light;
+  --background-0: var(--linen-0);
+  --background-1: var(--linen-1);
+  --foreground-0: var(--umber-0);
+  --foreground-1: var(--umber-1);
+  --accent-0: var(--green-teal);
+  --accent-1: var(--sage-deep);
+  --accent-2: var(--mauve-deep);
+  --accent-3: var(--rose-deep);
+  --highlight-0: var(--rose-deep);
+  --highlight-1: var(--green-teal);
+  --muted-0: var(--taupe-0);
+  --muted-1: var(--taupe-1);
+  --muted-2: var(--dusty-rose);
+  --warn: var(--amber);
+  --error: var(--rose-deep);
+  /*default colors*/
+  color: var(--foreground-0);
+  background-color: var(--background-0);
+}

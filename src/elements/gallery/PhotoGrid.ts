@@ -14,10 +14,15 @@ export class PhotoGrid extends LitElement {
       }
 
       .photo-grid {
-        display: grid;
-        grid-template-columns: repeat(var(--columns, 3), minmax(0, 1fr));
-        gap: var(--photo-gap, 1rem);
+        column-count: var(--columns, 3);
+        column-gap: var(--photo-gap, 0.25rem);
         width: 100%;
+      }
+
+      ::slotted(lmnt-photo) {
+        display: block;
+        break-inside: avoid;
+        margin-bottom: var(--photo-gap, 0.25rem);
       }
 
       /* the [open] is load-bearing: the UA sheet's dialog:not([open]) { display: none }
@@ -45,8 +50,8 @@ export class PhotoGrid extends LitElement {
       /* ::backdrop only inherits custom properties in newer engines;
          the literal is what --background-0 resolves to today */
       dialog.lightbox::backdrop {
-        background-color: var(--background-0, #21252b);
-        opacity: 0.94;
+        background-color: var(--background-0, #fff8f2);
+        opacity: 0.96;
       }
 
       .full {
@@ -79,12 +84,13 @@ export class PhotoGrid extends LitElement {
         border-radius: 50%;
         font-size: 1.75rem;
         line-height: 1;
-        background-color: var(--background-1);
-        color: var(--foreground-1);
+        background-color: transparent;
+        color: var(--muted-0);
+        transition: color 120ms ease-out;
       }
 
       .nav:hover {
-        color: var(--accent-0);
+        color: var(--foreground-0);
       }
 
       .prev,
@@ -122,7 +128,7 @@ export class PhotoGrid extends LitElement {
           opacity: 0;
         }
         to {
-          opacity: 0.94;
+          opacity: 0.96;
         }
       }
 
@@ -138,13 +144,13 @@ export class PhotoGrid extends LitElement {
 
       @media only screen and (max-width: 768px) {
         .photo-grid {
-          grid-template-columns: repeat(2, minmax(0, 1fr));
+          column-count: 2;
         }
       }
 
       @media only screen and (max-width: 480px) {
         .photo-grid {
-          grid-template-columns: minmax(0, 1fr);
+          column-count: 1;
         }
 
         dialog.lightbox[open] {

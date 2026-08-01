@@ -7,8 +7,18 @@
     <meta name="googlebot" content="index,follow">
     <title>lmnt.</title>
     <link rel="icon" type="image/webp" href="/images/avatar.webp"/>
-    <meta name="theme-color" content="#002b36">
+    <meta name="theme-color" content="#fff8f2">
     <link href="/styles/base.css" rel="stylesheet"/>
+    <link id="lmnt-theme" href="/lib/theme/pastel-90s.css" rel="stylesheet"/>
+    <script>
+      /* restore the saved theme before first paint; lmnt-theme-switcher owns it from there */
+      try {
+        var savedTheme = localStorage.getItem('lmnt-theme')
+        if (savedTheme && /^[a-z0-9-]+$/.test(savedTheme)) {
+          document.getElementById('lmnt-theme').href = '/lib/theme/' + savedTheme + '.css'
+        }
+      } catch (e) {}
+    </script>
     <script src="src/index.ts" type="module"></script>
 </head>
 <body>
@@ -17,15 +27,8 @@
         <lmnt-avatar-header src="/images/avatar.webp" link="/">
             <cursor-animation>lmnt.</cursor-animation>
         </lmnt-avatar-header>
+        <lmnt-theme-switcher></lmnt-theme-switcher>
     </lmnt-header>
-    <lmnt-content>
-        <lmnt-console>
-            console
-        </lmnt-console>
-        <lmnt-prompt>
-            prompt
-        </lmnt-prompt>
-    </lmnt-content>
     <lmnt-content>
         <lmnt-photo-grid columns="3">
             <lmnt-photo src="/images/photos/photo-1.svg" full="/images/photos/photo-1-full.svg"
