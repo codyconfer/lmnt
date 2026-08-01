@@ -1,5 +1,5 @@
 @import url("fonts.css");
-@import url("../lib/theme/vivid-one-dark.css");
+/* the theme is loaded by the link#lmnt-theme in index.html so it can be swapped at runtime */
 @import url("../lib/theme/syntax.css");
 
 :root {
