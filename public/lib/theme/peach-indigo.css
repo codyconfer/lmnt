@@ -11,14 +11,14 @@
   /*derived shades*/
   --plum-0: #46345a;
   --plum-1: #35244a;
-  --dusk-0: #79688a;
+  --dusk-0: #6a5978;
   --dusk-1: #93839f;
   --dusk-2: #ad9fb8;
-  --seafoam-deep: #3da35f;
-  --slate-violet: #6b5bd6;
-  --orchid-deep: #a04ca8;
-  --honey: #b5822f;
-  --berry: #cc4f5e;
+  --seafoam-deep: #286b3b;
+  --slate-violet: #5542b2;
+  --orchid-deep: #873f8f;
+  --honey: #815b0c;
+  --berry: #9b293b;
 
   /*light scheme*/
   color-scheme: light;
@@ -33,7 +33,7 @@
   --highlight-0: var(--orchid-deep);
   --highlight-1: var(--slate-violet);
   --muted-0: var(--dusk-0);
-  --muted-1: var(--dusk-1);
+  --muted-1: var(--dusk-0);
   --muted-2: var(--dusk-2);
   --warn: var(--honey);
   --error: var(--berry);
