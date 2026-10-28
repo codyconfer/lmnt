@@ -222,6 +222,7 @@ export class PhotoGrid extends LitElement {
   private _index: number = -1
 
   private _scrollLock: string = ''
+  private _touchStart: {x: number; y: number} | null = null
 
   private get _columns(): number {
     return Number.isFinite(this.columns) && this.columns > 0 ? Math.trunc(this.columns) : 3
@@ -278,6 +279,23 @@ export class PhotoGrid extends LitElement {
     this._step(1)
   }
 
+  private _onTouchStart(e: TouchEvent) {
+    const touch = e.changedTouches[0]
+    if (touch) this._touchStart = {x: touch.clientX, y: touch.clientY}
+  }
+
+  private _onTouchEnd(e: TouchEvent) {
+    const start = this._touchStart
+    this._touchStart = null
+    const touch = e.changedTouches[0]
+    if (!start || !touch) return
+    const deltaX = touch.clientX - start.x
+    const deltaY = touch.clientY - start.y
+    if (Math.abs(deltaX) < 50 || Math.abs(deltaX) <= Math.abs(deltaY)) return
+    if (deltaX < 0) this._next()
+    else this._prev()
+  }
+
   private _onKeydown(e: KeyboardEvent) {
     if (e.key === 'ArrowRight') {
       e.preventDefault()
@@ -304,6 +322,8 @@ export class PhotoGrid extends LitElement {
         aria-label="photo viewer"
         @close=${this._onClose}
         @keydown=${this._onKeydown}
+        @touchstart=${this._onTouchStart}
+        @touchend=${this._onTouchEnd}
         @click=${this._onDialogClick}>
         ${current
           ? html`
