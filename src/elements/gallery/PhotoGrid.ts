@@ -142,6 +142,36 @@ export class PhotoGrid extends LitElement {
         }
       }
 
+      @media only screen and (min-width: 900px) {
+        .photo-grid {
+          column-count: 4;
+        }
+      }
+
+      @media only screen and (min-width: 2800px) {
+        .photo-grid {
+          column-count: 5;
+        }
+      }
+
+      @media only screen and (min-width: 3200px) {
+        .photo-grid {
+          column-count: 6;
+        }
+      }
+
+      @media only screen and (min-width: 3600px) {
+        .photo-grid {
+          column-count: 7;
+        }
+      }
+
+      @media only screen and (min-width: 4000px) {
+        .photo-grid {
+          column-count: 8;
+        }
+      }
+
       @media only screen and (max-width: 768px) {
         .photo-grid {
           column-count: 2;
@@ -279,7 +309,7 @@ export class PhotoGrid extends LitElement {
           ? html`
             <img class="full" src="${current.fullSrc}" alt="${current.alt}" decoding="async"/>
             <p class="meta" aria-live="polite">
-              <span>${current.caption || current.alt}</span>
+              ${current.caption ? html`<span>${current.caption}</span>` : nothing}
               <span class="counter small-text mono">${this._index + 1} / ${this._photos.length}</span>
             </p>
             <button class="prev nav" type="button" aria-label="previous photo" @click=${this._prev}>

@@ -18,11 +18,20 @@ export class Footer extends LitElement {
         flex-direction: row;
       }
       .copyright {
+        display: flex;
+        align-items: center;
+        gap: 0.25rem;
         font-size: 0.8rem;
       }
       @media only screen and (max-width: 480px) {
         :host {
           margin: 0;
+        }
+        .wrapper {
+          padding: 0.5rem;
+        }
+        .copyright {
+          font-size: 0.7rem;
         }
       }
     `]
@@ -37,7 +46,9 @@ export class Footer extends LitElement {
             <slot></slot>
           </div>
           <div class="copyright">
-            &copy; ${this.year}
+            <slot name="right"></slot>
+            <span>&copy;</span>
+            <span>${this.year}</span>
           </div>
         </div>
       </footer>

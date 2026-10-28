@@ -29,6 +29,22 @@ export class Photo extends LitElement {
         background-color: var(--background-1);
       }
 
+      .photo {
+        position: relative;
+      }
+
+      .photo::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at center, transparent 40%, rgb(0 0 0 / 52%) 100%);
+        -webkit-backdrop-filter: blur(2px);
+        backdrop-filter: blur(2px);
+        -webkit-mask-image: radial-gradient(ellipse at center, transparent 40%, #000 100%);
+        mask-image: radial-gradient(ellipse at center, transparent 40%, #000 100%);
+      }
+
       .photo img {
         width: 100%;
         height: auto;
