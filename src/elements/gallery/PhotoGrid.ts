@@ -154,24 +154,6 @@ export class PhotoGrid extends LitElement {
         }
       }
 
-      @media only screen and (min-width: 2400px) {
-        .photo-grid {
-          column-count: 6;
-        }
-      }
-
-      @media only screen and (min-width: 3000px) {
-        .photo-grid {
-          column-count: 7;
-        }
-      }
-
-      @media only screen and (min-width: 3600px) {
-        .photo-grid {
-          column-count: 8;
-        }
-      }
-
       @media only screen and (max-width: 768px) {
         .photo-grid {
           column-count: 2;

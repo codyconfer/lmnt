@@ -1,4 +1,5 @@
 export * from '@elements/content/AvatarHeader.ts'
+export * from '@elements/content/EventAgenda.ts'
 export * from '@elements/content/IconGrid.ts'
 export * from '@elements/content/IconHeader.ts'
 export * from '@elements/content/IconRow.ts'
